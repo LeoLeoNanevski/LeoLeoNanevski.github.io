@@ -1,108 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leo Nanevski - Professional Profile</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- Basic Setup --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5; /* Light gray background, like the screenshot */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-    <div class="container">
-        <header>
-            <h1>Leo Nanevski</h1>
-            <h2>Logistics Expert & Enterprise IT Professional</h2>
-            <p class="contact-info">
-                +389 75 468 393 | leo_nanevski_87@hotmail.com | <a href="https://linkedin.com/in/leo-nanevski/" target="_blank">LinkedIn</a> | <a href="https://github.com/LeoLeoNanevski" target="_blank">GitHub</a>
-            </p>
-        </header>
+.container {
+    max-width: 900px;
+    margin: 40px auto; /* Center the "page" */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
 
-        <main>
-            <section class="summary">
-                <h3>Professional Summary (The "Why")</h3>
-                <p>Hello. I'm Leo. For over 12 years, I was the person on the ground in high-pressure logistics hubs (like TAV Airports and DHL Express). I was the end-user for the exact kind of software IT companies build: I managed 24/7 incidents, supported software transitions, and saw every "bug" from the operational side.</p>
-                <p>I decided to stop being just the user and learn to be the builder. I've spent the last two years in a deliberate career pivot, training intensively in the Microsoft ecosystem (MS SQL, C#, and Azure).</p>
-                <p class="highlight">I'm not a typical junior. I'm the "bridge" who speaks both languages: I can talk to a customs agent about a process bottleneck and then turn around and discuss the database schema with the development team.</p>
-            </section>
+main {
+    padding: 20px 40px 40px 40px;
+}
 
-            <section class="skills">
-                <h3>Technical Skills (The "How")</h3>
-                <p>My skill set, presented as a SQL query:</p>
-                <pre class="code-block">
-<code>
-SELECT Skill, Category, Experience_Level
-FROM LeoNanevski.Skills
-WHERE Is_Ready_For_Work = 'True'
-ORDER BY Category, Experience_Level DESC;
+/* --- Header --- */
+header {
+    text-align: center;
+    padding: 40px 40px 30px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
 
-/* --- QUERY RESULTS ---
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: #000;
+}
 
-| Skill | Category | Experience_Level |
-|---------------------------|-------------------|--------------------|
-| MS SQL | Databases | Foundational |
-| Database Fundamentals | Databases | Foundational |
-| Microsoft Azure (In-Prog) | Cloud & Infra | Foundational |
-| Linux & Shell Scripting | Cloud & Infra | Familiar |
-| C# | Programming | Foundational |
-| ASP.NET Web APIs | Programming | Foundational |
-| JavaScript, HTML, CSS | Programming | Foundational |
-| Application Support | IT Operations | 1+ Years |
-| Incident Resolution & RCA | IT Operations | 1+ Years |
-| Ticketing (Jira, Zendesk) | IT Operations | 1+ Years |
-| Customs & Logistics Ops | Domain Expertise | Expert (12+ Yrs) |
-| SOP & Process Improvement | Domain Expertise | Expert (12+ Yrs) |
-| Stakeholder Communication | Domain Expertise | Expert (12+ Yrs) |
-*/
-</code>
-                </pre>
-            </section>
+header h2 {
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #0078d4; /* Blue sub-header */
+}
 
-            <section class="experience">
-                <h3>Professional Experience</h3>
-                
-                <h4 class="job-heading">// My IT Career</h4>
-                <div class="job">
-                    <p class="job-title"><strong>Data Entry & Tech. Support Specialist</strong> | INVOLVE Development (Olion) (2025–Current)</p>
-                    <ul>
-                        <li>First point of contact for technical support, managing issues via Jira.</li>
-                        <li>Apply structured problem-solving to diagnose application issues, document bugs, and escalate to senior engineers.</li>
-                    </ul>
-                </div>
+.contact-info {
+    font-size: 1rem;
+    color: #555;
+}
 
-                <h4 class="job-heading">// My Logistics Career (Where I was the "IT Bridge")</h4>
-                <div class="job">
-                    <p class="job-title"><strong>Customs Clearance, Operations Agent</strong> | TAV Airports Macedonia (2022–2024)</p>
-                    <ul>
-                        <li>Led 24/7 air cargo ops team; primary escalation point for all operational incidents.</li>
-                        <li>Developed and enforced Standard Operating Procedures (SOPs) for incident handling.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <p class="job-title"><strong>Customs Clearance, GTW OPS Agent</strong> | DHL Express Macedonia (2019–2022)</p>
-                    <ul>
-                        <li>Selected as subject-matter expert (SME) to support implementation of the new CDEPS customs system.</li>
-                        <li>Acted as liaison between operations team and the IT/implementation team.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <p class="job-title"><strong>Custom Forwarding Agent / Commercialist</strong> | Viator & Vector (2012–2019)</p>
-                    <ul>
-                        <li>Acted as local power user and first-line support for ASYCUDA customs software.</li>
-                        <li>Played a key role in the planning and transition to the new CDEPS system.</li>
-                    </ul>
-                </div>
-            </section>
+.contact-info a {
+    color: #0078d4;
+    text-decoration: none;
+}
 
-            <section class="education">
-                <h3>Education & Technical Training</h3>
-                <ul>
-                    <li>Azure Microsoft Cloud Administrator (In-Progress, 2024-2025) - Semos Education</li>
-                    <li>ITOSE - IT Operations and Support Engineer (2024) - Qinshift (Seavus, SEDC)</li>
-                    <li>Academy for Web Development (C#,.NET, SQL) (2023) - Qinshift (Seavus, SEDC)</li>
-                    <li>University of St. Cyril and Methodius | Faculty of Psychology (2008)</li>
-                </ul>
-            </section>
-        </main>
-    </div>
-</body>
-</html>
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- Section Headings --- */
+h3 {
+    font-size: 1.4rem;
+    color: #000;
+    border-bottom: 2px solid #0078d4;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* --- Summary Section --- */
+.summary p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.summary.highlight {
+    font-style: italic;
+    color: #111;
+}
+
+/* --- Skills & Code Block --- */
+.skills p {
+    font-size: 1.05rem;
+}
+
+.code-block {
+    background-color: #2d2d2d; /* Dark background */
+    color: #f1f1f1;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 20px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Menlo', 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+/* --- Experience Section --- */
+.job-heading {
+    font-family: 'Consolas', 'Menlo', monospace;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+
+.job-title strong {
+    color: #000;
+}
+
+.job ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.job li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* --- Education Section --- */
+.education ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.education li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}

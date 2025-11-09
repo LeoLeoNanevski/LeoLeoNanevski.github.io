@@ -23,19 +23,22 @@ body {
 /* --- Main CV Container (CSS Grid) --- */
 .cv-container {
     display: grid;
-    /* This creates the two columns */
     grid-template-columns: 350px 1fr; /* 350px sidebar, rest is main */
     max-width: 1400px;
-    min-height: 100vh;
     margin: 20px auto;
     border-radius: 12px;
-    overflow: hidden; /* Important for rounded corners */
+    overflow: hidden; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    /* === FIX #1: Make the whole container dark === */
+    background-color: var(--sidebar-bg); 
+    /* We REMOVED min-height: 100vh; */
 }
 
 /* === LEFT COLUMN (SIDEBAR) === */
 .sidebar {
-    background-color: var(--sidebar-bg);
+    /* === FIX #2: Remove the background from here === */
+    /* background-color: var(--sidebar-bg); (This line is GONE) */
     color: var(--text-light);
     padding: 40px;
 }
@@ -50,10 +53,10 @@ body {
 .profile-photo {
     width: 180px;
     height: 180px;
-    max-width: 100%; /* Ensures photo doesn't overflow */
+    max-width: 100%; 
     border-radius: 50%;
     border: 6px solid var(--primary-color);
-    object-fit: cover; /* Ensures photo isn't stretched */
+    object-fit: cover; 
     margin-bottom: 20px;
 }
 
@@ -143,7 +146,7 @@ body {
 .btn {
     display: block;
     width: 100%;
-    box-sizing: border-box; /* <-- ADD THIS LINE */
+    box-sizing: border-box; /* This fixes the alignment */
     background-color: var(--primary-color);
     color: #fff;
     padding: 14px 28px;
@@ -167,7 +170,7 @@ body {
 .main-content {
     background-color: var(--main-bg);
     padding: 40px;
-    overflow-y: auto; /* Allows scrolling if content is long */
+    overflow-y: auto; 
 }
 
 .card {
@@ -177,6 +180,11 @@ body {
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Make the last card have no bottom margin */
+.card:last-child {
+    margin-bottom: 0;
 }
 
 .card h2 {
@@ -215,7 +223,7 @@ pre.code-block code {
     white-space: pre; 
 }
 
-/* --- NEW: Styling for the Experience Card --- */
+/* --- Styling for the Experience Card --- */
 .main-content h4 {
     font-size: 1.1rem;
     font-weight: 600;

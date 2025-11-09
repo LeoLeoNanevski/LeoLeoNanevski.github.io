@@ -143,6 +143,7 @@ body {
 .btn {
     display: block;
     width: 100%;
+    box-sizing: border-box; /* <-- ADD THIS LINE */
     background-color: var(--primary-color);
     color: #fff;
     padding: 14px 28px;

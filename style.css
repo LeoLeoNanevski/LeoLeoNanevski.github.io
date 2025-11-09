@@ -50,6 +50,7 @@ body {
 .profile-photo {
     width: 180px;
     height: 180px;
+    max-width: 100%; /* <-- ADD THIS LINE */
     border-radius: 50%;
     border: 6px solid var(--primary-color);
     object-fit: cover; /* Ensures photo isn't stretched */

@@ -1,88 +1,131 @@
+/* --- Import new font --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* --- Global Styles --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f6f8;
-    color: #333;
+    background-color: #f9fafb; /* Lighter, cleaner background */
+    color: #374151; /* Darker charcoal text */
     margin: 0;
     padding: 20px;
 }
+
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 850px;
+    margin: 30px auto;
     padding: 20px;
 }
+
+/* --- Header --- */
 header {
     text-align: center;
-    border-bottom: 2px solid #0078d4;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #e5e7eb; /* Lighter border */
 }
+
 header h1 {
     margin: 0;
-    color: #0078d4;
-    font-size: 2.5rem;
+    color: #111827; /* Near-black for H1 */
+    font-size: 2.75rem;
+    font-weight: 700;
 }
+
 .subtitle {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.3rem;
+    color: #0078d4; /* Keep the primary blue */
     font-weight: 300;
+    margin-top: 5px;
 }
+
+/* --- Card Style (The Big Change) --- */
 .card {
     background-color: #fff;
-    padding: 30px;
+    padding: 35px 40px; /* More internal padding */
     margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 12px; /* Softer radius */
+    border: 1px solid #e5e7eb; /* Subtle border */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Modern, subtle shadow */
+    transition: all 0.3s ease;
 }
-h2 {
+
+.card:hover {
+    /* Add a "lift" effect on hover */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px);
+}
+
+.card h2 {
     color: #0078d4;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
     margin-top: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
-/* --- New styles for the SQL Code Block --- */
+.card p {
+    font-size: 1.05rem;
+    color: #4b5563; /* Softer text color */
+}
+
+/* --- Code Block --- */
 pre.code-block {
-    background-color: #2d2d2d; /* Dark background */
-    color: #dcdcdc; /* Light grey text */
-    padding: 15px;
-    border-radius: 5px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.9em;
-    overflow-x: auto; /* Allows horizontal scrolling */
+    background-color: #1f2937; /* Darker, richer blue-gray */
+    color: #d1d5db; /* Lighter text for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    border: 1px solid #374151;
 }
 pre.code-block code {
-    white-space: pre; /* Preserves all whitespace and line breaks */
+    white-space: pre; 
 }
-/* --- End new styles --- */
 
+/* --- Button --- */
 .links {
     text-align: center;
     margin-top: 30px;
 }
+
 .btn {
     display: inline-block;
     background-color: #0078d4;
     color: #fff;
-    padding: 12px 25px;
-    border-radius: 5px;
+    padding: 14px 28px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /* Button shadow */
+    box-shadow: 0 4px 6px -1px rgba(0, 120, 212, 0.3), 0 2px 4px -1px rgba(0, 120, 212, 0.15);
 }
+
 .btn:hover {
     background-color: #005a9e;
+    /* Lift the button on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 7px 10px -2px rgba(0, 120, 212, 0.3), 0 4px 6px -1px rgba(0, 120, 212, 0.15);
 }
+
+/* --- Footer --- */
 footer {
     text-align: center;
     margin-top: 40px;
-    color: #888;
+    color: #9ca3af; /* Light gray */
     font-size: 0.9rem;
 }
+
 footer a {
     color: #0078d4;
     text-decoration: none;
+    font-weight: 600;
 }
+
 footer a:hover {
     text-decoration: underline;
 }

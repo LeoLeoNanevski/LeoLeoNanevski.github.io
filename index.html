@@ -1,4 +1,118 @@
-<section class="card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Nanevski - Professional Profile</title>
+    
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to our stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icon library for contact info -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <!-- === LEFT COLUMN (SIDEBAR) === -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <!-- Your Profile Picture -->
+                <img src="profile.jpg" alt="Leo Nanevski" class="profile-photo">
+                
+                <h1 class="name">Leo Nanevski</h1>
+                <h2 class="subtitle">The "Bridge" Between Logistics & IT</h2>
+                
+                <div class="divider"></div>
+
+                <!-- Contact Info Section -->
+                <section class="contact-info">
+                    <h3>Contact</h3>
+                    <p><i class="fa-solid fa-phone"></i> +389 75 468 393</p>
+                    <p><i class="fa-solid fa-envelope"></i> leo_nanevski_87@hotmail.com</p>
+                    <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/leo-nanevski/" target="_blank">LinkedIn Profile</a></p>
+                    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/LeoLeoNanevski" target="_blank">GitHub Profile</a></p>
+                </section>
+
+                <div class="divider"></div>
+
+                <!-- Skills Section -->
+                <section class="skills">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>MS SQL</li>
+                        <li>Microsoft Azure (In-Progress)</li>
+                        <li>C# & ASP.NET Web APIs</li>
+                        <li>Linux & Shell Scripting</li>
+                        <li>JavaScript, HTML, CSS</li>
+                    </ul>
+                    <h3>Domain Expertise</h3>
+                    <ul>
+                        <li>Application Support (SME)</li>
+                        <li>Incident Resolution & RCA</li>
+                        <li>Customs & Logistics Ops</li>
+                        <li>SOP & Process Improvement</li>
+                    </ul>
+                </section>
+                
+                <div class="divider"></div>
+                
+                <!-- Main GitHub CV Button -->
+                <div class="sidebar-button">
+                    <a href="https://github.com/LeoLeoNanevski/leonanevski" class="btn" target="_blank">View Full 'CV as Code'</a>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- === RIGHT COLUMN (MAIN CONTENT) === -->
+        <main class="main-content">
+            
+            <!-- Professional Summary Card -->
+            <section class="card">
+                <h2>Hello! (The "Why")</h2>
+                <p>After 12+ years on the front lines of logistics, I'm pivoting to a career in IT. I've been the end-user, and now I'm training to be the builder.</p>
+                <p>I'm not a typical junior. I'm a "bridge" professional who speaks both fluent **Operations** and emerging **Code**. I can talk to a customs agent about a process bottleneck and then turn around and discuss the database schema with the development team.</p>
+            </section>
+            
+            <!-- Technical Skills (SQL) Card -->
+            <section class="card">
+                <h2>Technical Skills (The "How")</h2>
+                <p>Here's my skill set, presented as a SQL query:</p>
+                <pre class="code-block">
+<code>SELECT Skill, Category, Experience_Level
+FROM LeoNanevski.Skills
+WHERE Is_Ready_For_Work = 'True'
+ORDER BY Category, Experience_Level DESC;
+
+/* --- QUERY RESULTS ---
+
+Skill                     Category            Experience_Level
+-----------------------   ------------------- --------------------
+MS SQL                    Databases           Foundational
+Database Fundamentals     Databases           Foundational
+Microsoft Azure (In-Prog) Cloud & Infra       Foundational
+Linux & Shell Scripting   Cloud & Infra       Familiar
+C#                        Programming         Foundational
+ASP.NET Web APIs          Programming         Foundational
+JavaScript, HTML, CSS     Programming         Foundational
+Application Support       IT Operations       12+ Years (as SME)
+Incident Resolution & RCA IT Operations       12+ Years (as SME)
+Ticketing (Jira, Zendesk) IT Operations       Foundational
+Customs & Logistics Ops   Domain Expertise    Expert (12+ Yrs)
+SOP & Process Improvement Domain Expertise    Expert (12+ Yrs)
+Stakeholder Communication Domain Expertise    Expert (12+ Yrs)
+*/</code></pre>
+            </section>
+
+            <!-- === NEW: Professional Experience Card === -->
+            <section class="card">
                 <h2>Professional Experience</h2>
                 
                 <h4>// My IT Career</h4>
@@ -33,3 +147,24 @@
                     </ul>
                 </div>
             </section>
+            
+            <!-- Education Card -->
+            <section class="card">
+                <h2>Education & Technical Training</h2>
+                 <ul>
+                    <li><strong>Azure Microsoft Cloud Administrator</strong> (In-Progress) - <em>Semos Education</em></li>
+                    <li><strong>ITOSE - IT Operations & Support Engineer</strong> - <em>Qinshift (Seavus, SEDC)</em></li>
+                    <li><strong>Academy for Web Development (C#, .NET, SQL)</strong> - <em>Qinshift (Seavus, SEDC)</em></li>
+                    <li><strong>University of St. Cyril and Methodius</strong> | Faculty of Psychology</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+    
+    <script>
+        // A friendly "easter egg" for any developers who open the console.
+        console.log("Hello, fellow tech person! Thanks for checking out my code. As you can see, I've got my 'why' (12+ years of logistics) and I'm building my 'how' (C#, SQL, Azure). Let's talk!");
+    </script>
+</body>
+</html>
